@@ -7,7 +7,7 @@ const changeCollectionListDetails = (starImage, res) => {
 
     moviesList.forEach(value => {
         if (value.movieId === res.id) {
-            starImage.src = "../src/images/star_inactive.png";
+            starImage.src = "./src/images/star_inactive.png";
             moviesList =  moviesList.filter(value => value.movieId !== res.id);
             idIsExist = true;
 
@@ -20,7 +20,7 @@ const changeCollectionListDetails = (starImage, res) => {
     });
 
     if (!idIsExist) {
-        starImage.src = "../src/images/star_active.png";
+        starImage.src = "./src/images/star_active.png";
         moviesList.push({ movieName: res.name, movieId: res.id });
 
         for (let i = 0; i < moviesStars.length; i++) {

@@ -47,7 +47,7 @@ const movieClicked = (index) => {
             moviesList.forEach(value => { if (value.movieId === res.id) starIsActive = true; });
             productionInfoCategorie.innerText = "Director: "
             yearDescription.innerText = res.year;
-            starImage.src = starIsActive ? "../src/images/star_active.png" : "../src/images/star_inactive.png";
+            starImage.src = starIsActive ? "./src/images/star_active.png" : "./src/images/star_inactive.png";
             starImage.alt = "add to favourite collection";
             movieDescription.innerText = res.description;
             movieDetailedName.innerText = res.name;

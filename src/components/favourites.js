@@ -8,7 +8,7 @@ const favourites = () => {
     const favouriteHeader = componentCreator("h2", "favourtiteHeader");
 
     favouriteHeader.innerText = "Favourite List";
-    headerImage.src = '../src/images/star_active.png';
+    headerImage.src = './src/images/star_active.png';
     headerImage.alt = "Favourite List";
     favouritesHeaderWrapper.append(headerImage);
     favouritesHeaderWrapper.append(favouriteHeader);
