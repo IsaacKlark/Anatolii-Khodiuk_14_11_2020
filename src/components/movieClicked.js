@@ -7,7 +7,7 @@ const movieClicked = (index) => {
     document.querySelector(".moviesWrapper").style.display = "none";
     document.querySelector(".favouritesMovies").style.display = "none";
 
-    fetch(`http://my-json-server.typicode.com/moviedb-tech/movies/list/${index}`)
+    fetch(`https://my-json-server.typicode.com/moviedb-tech/movies/list/${index}`)
         .then(res => res.json(), err => {
             alert(err);
             document.querySelector(".preLoader").style.display = "none";
