@@ -17,7 +17,7 @@ const filterGenres = (e, moviesFromServer) => {
         if (!filtered.includes(+movies[i].dataset.id)) {
             movies[i].style.display = "none";
         } else {
-            movies[i].style.display = "block";
+            movies[i].style.display = "flex";
         }
     }
 
