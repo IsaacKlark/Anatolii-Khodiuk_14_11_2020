@@ -1,6 +1,7 @@
 import componentCreator from '../functions/componentCreator';
 import movieClicked from './movieClicked';
 import changeCollectionList from '../functions/changeCollectionList';
+import filterGenres from '../functions/filterGenres';
 
 const movies = (moviesFromServer) => {
     const moviesWrapper = componentCreator("div", "moviesWrapper");
@@ -47,9 +48,16 @@ const movies = (moviesFromServer) => {
         movies.append(movie);
     }
     const moviesWrapperHeader = componentCreator("h1", "moviesWrapperHeader");
+
+    const filterInput = componentCreator("input", "input");
+    filterInput.type = "text";
+    filterInput.placeholder = "filter by genres";
+
+    filterInput.addEventListener("input", e => {filterGenres(e, moviesFromServer)})
     
     moviesWrapperHeader.innerText = 'Movies Gallery';
     moviesWrapper.append(moviesWrapperHeader);
+    moviesWrapper.append(filterInput);
     moviesWrapper.append(movies);
     document.body.appendChild(moviesWrapper);
 }
